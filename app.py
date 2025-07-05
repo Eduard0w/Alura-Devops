@@ -1,4 +1,6 @@
 from fastapi import FastAPI
+# import para possibilitar os metodos GET e POST livremente
+from fastapi.middleware.cors import CORSMiddleware
 from database import engine, Base
 from routers.alunos import alunos_router
 from routers.cursos import cursos_router
@@ -15,6 +17,16 @@ app = FastAPI(
         Permite realizar diferentes operações em cada uma dessas entidades.
     """, 
     version="1.0.0",
+)
+
+# Permissões
+app.add_middleware(
+    CORSMiddleware,
+    # estou definindo um url que será utilizado para o estudo de get e post
+    allow_origins=["http://127.0.0.1:5500"],  # ou ["http://127.0.0.1:5500"]
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 app.include_router(alunos_router, tags=["alunos"])
