@@ -16,8 +16,26 @@
   - No terminal usamos: docker run -p 8000:8000 >nome da imagem<
   - também tem dessa forma docker run -d -p 8000:8000 >nome da imagem<
 
-Palavra chave da primeira aula é: MARVEL
+Palavra chave da primeira aula é: Marvel
 
 # Segunda aula: Aprenda CI(Continuous Integration(Integração Contínua))/CD na prática: automatize do build ao deploy
-Palavras "chaves": YML/YAML,  
+Palavras interessantes para entender: YML/YAML 
 ## Primeiro:
+- Criação do "docker-compose.yml" arquivo que facilita a inicialização da imagem criada.
+  - Docker-compose.yml a principio facilita a maneira de dar run na imagem criada.
+  - antes você precisava fazer um processo maior, agora com esse novo arquivo com apenas "docker compose up" já faz a aplicação rodar.
+
+## Segundo:
+- Após mandar para o seu repositorio vamos acrscentar pelo action do github um workflow, para facilitar as novas criações de imagens com CI.
+  - Esse workflow "automatiza" a criação de novas imagens com a adição das novas atualizações do software.
+
+Palavra chave da segunda aula é: Ellis
+
+
+# Terceira aula: Fazendo o deploy na Google Cloud Plataform
+- Baixar CLI gcloud no seu computador
+  - fazer login com seu email, escolher seu projeto criado no google cloud(que por sinal é pago😢😢) e posta-lo. 
+  - aceitar um monte de coisas.
+  - escolher o servidor correto (no caso no brasil, tem um em sao paulo - (32)southamerica-east1).
+
+Palavra chave da terceira aula é: YAML
